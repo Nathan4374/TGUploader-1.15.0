@@ -17,7 +17,6 @@ from pydownloader.downloader import Downloader
 from ProxyCloud import ProxyCloud
 import ProxyCloud
 import socket
-import tlmedia
 import S5Crypto
 
 

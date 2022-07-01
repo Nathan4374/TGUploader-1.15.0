@@ -514,7 +514,7 @@ def onmessage(update,bot:ObigramClient):
                     jdb.save_data_user(username,getUser) 
                     jdb.save()
                     bot.sendMessage("seleccionado")
-            tuto.close()
+                    tuto.close()
             return
         if '/dir' in msgText:
             try:

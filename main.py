@@ -439,8 +439,7 @@ def onmessage(update,bot:ObigramClient):
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando /uptype (typo de subida (evidence,draft,blog))❌')
             return
-       
-
+            
         if '/proxy 1' in msgText: 
             try:
                 tuto = open('proxy1.txt','r')

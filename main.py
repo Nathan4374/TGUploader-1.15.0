@@ -452,7 +452,7 @@ def onmessage(update,bot:ObigramClient):
                     jdb.save()
                     bot.sendMessage("seleccionado")
                     tuto.close()
-            return
+                return
 
         if '/dir' in msgText:
             try:

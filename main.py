@@ -453,8 +453,7 @@ def onmessage(update,bot:ObigramClient):
                     bot.sendMessage("seleccionado")
                     tuto.close()
                 return
-
-        
+                
         if '/cancel_' in msgText:
             try:
                 cmd = str(msgText).split('_',2)

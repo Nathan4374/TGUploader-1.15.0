@@ -513,7 +513,7 @@ def onmessage(update,bot:ObigramClient):
                     getUser['proxy'] = proxy 
                     jdb.save_data_user(username,getUser) 
                     jdb.save()
-                    bot.sendMessage("seleccionado")
+                    bot.sendMessage(update.message.chat.id,'comando')
                     tuto.close()
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando')

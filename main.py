@@ -515,7 +515,9 @@ def onmessage(update,bot:ObigramClient):
                     jdb.save()
                     bot.sendMessage("seleccionado")
                     tuto.close()
-                return
+            except:
+                bot.sendMessage(update.message.chat.id,'❌Error en el comando')
+            return
         if '/dir' in msgText:
             try:
                 cmd = str(msgText).split(' ',2)

@@ -400,11 +400,8 @@ def onmessage(update,bot:ObigramClient):
                    getUser['zips'] = size
                    jdb.save_data_user(username,getUser)
                    jdb.save()
-                   msg = 'Ahora los zips seran de '+ sizeof_fmt(size*1024*1024) +'\n'
-                   msg+= 'Añadiendo a la configuración...\n'
+                   msg = 'Ahora los zips seran de '+ sizeof_fmt(size*1024*1024) +''+ size +'\n'
                    bot.sendMessage(update.message.chat.id,msg)
-                   statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
-                   bot.editMessage(msg,statInfo)
                 except:
                    bot.sendMessage(update.message.chat.id,f'❌Error en el comando /zip size❌')
                 return

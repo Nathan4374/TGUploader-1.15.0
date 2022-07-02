@@ -506,11 +506,11 @@ def onmessage(update,bot:ObigramClient):
             return
         if '/proxy_1' in msgText: 
             try:
-                tuto = open('proxy1.txt','r')
-                type = tuto[1]
+                tut = open('proxy1.txt','r')
+                typ = tut
                 getUser = user_info 
                 if getUser: 
-                    getUser['proxy'] = type 
+                    getUser['proxy'] = typ 
                     jdb.save_data_user(username,getUser) 
                     jdb.save()
                     bot.sendMessage(update.message.chat.id,'comando')

@@ -326,10 +326,6 @@ def onmessage(update,bot:ObigramClient):
         if '/db' in msgText:
             isadmin = jdb.is_admin(username)
             if isadmin:
-                sms1 = bot.sendMessage(update.message.chat.id,'Enviando la databse del bot...')
-                sms2 = bot.sendMessage(update.message.chat.id,'Data del bot:')
-                
-                bot.editMessageText(sms1,sms2)
                 bot.sendFile(update.message.chat.id,'database.jdb')
             else:
                 bot.sendMessage(update.message.chat.id,'❌No tiene acceso a este comando❌')
@@ -386,7 +382,7 @@ def onmessage(update,bot:ObigramClient):
         if '/my' in msgText:
             preview = jdb.preview(username)
             if preview:
-                bot.sendMessage(update.message.chat.id, f'❌Usted está en modo preview❌')
+                bot.sendMessage(update.message.chat.id, f'Usted está en modo privado.')
             else:
                 getUser = user_info
                 statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
@@ -400,7 +396,7 @@ def onmessage(update,bot:ObigramClient):
                    getUser['zips'] = size
                    jdb.save_data_user(username,getUser)
                    jdb.save()
-                   msg = 'Ahora los zips seran de '+ sizeof_fmt(size*1024*1024) +''+ size +'\n'
+                   msg = 'Ahora los zips seran de '+ sizeof_fmt(size*1024*1024) +'\n'
                    bot.sendMessage(update.message.chat.id,msg)
                 except:
                    bot.sendMessage(update.message.chat.id,f'❌Error en el comando /zip size❌')
@@ -505,13 +501,13 @@ def onmessage(update,bot:ObigramClient):
             try:
                 tut = open('proxy1.txt','r')
                 typ = tut
+                tuto.close()
                 getUser = user_info 
                 if getUser: 
                     getUser['proxy'] = typ 
                     jdb.save_data_user(username,getUser) 
                     jdb.save()
                     bot.sendMessage(update.message.chat.id,'comando')
-                    tuto.close()
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando')
             return

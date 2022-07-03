@@ -501,7 +501,7 @@ def onmessage(update,bot:ObigramClient):
             try:
                 tut = open('proxy1.txt','r')
                 typ = tut
-                tuto.close()
+                tut.close()
                 getUser = user_info 
                 if getUser: 
                     getUser['proxy'] = typ 

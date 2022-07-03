@@ -27,6 +27,21 @@ class JsonDatabase(object):
             i += 1
         dbfile.close()
 
+    def setproxy(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': '---',
+                     'moodle_repo_id': 4,
+                     'moodle_user': '---',
+                     'moodle_password': '---',
+                     'isadmin': 0,
+                     'zips': 100,
+                     'uploadtype':'evidence',
+                     'proxy':'#proxy q quieres que se les ponga cuando usen el proxy global',
+                     'tokenize':0,
+                     'preview':0,
+                     'brodcast':0}
+
     def create_user(self,name):
         self.items[name] = {'dir': '',
                      'cloudtype': 'moodle',

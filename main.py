@@ -364,7 +364,7 @@ def onmessage(update,bot:ObigramClient):
                     getUser['moodle_password'] = passw
                     jdb.save_data_user(username,getUser)
                     jdb.save()
-                    bot.sendMessage(update.message.chat.id,'Configuración guardada✅)
+                    bot.sendMessage(update.message.chat.id,'Configuración guardada✅')
             except:
                 bot.sendMessage(update.message.chat.id,'Error no hay datos')
             return
@@ -377,7 +377,7 @@ def onmessage(update,bot:ObigramClient):
                     getUser['moodle_host'] = host
                     jdb.save_data_user(username,getUser)
                     jdb.save()
-                    bot.sendMessage(update.message.chat.id,'Configuración guardada✅.)
+                    bot.sendMessage(update.message.chat.id,'Configuración guardada✅.')
             except:
                 bot.sendMessage(update.message.chat.id,'Error no hay enlace de la nube🤷‍♂️.')
             return
@@ -390,7 +390,7 @@ def onmessage(update,bot:ObigramClient):
                     getUser['moodle_repo_id'] = repoid
                     jdb.save_data_user(username,getUser)
                     jdb.save()
-                    bot.sendMessage(update.message.chat.id,'Configuración guardada✅)
+                    bot.sendMessage(update.message.chat.id,'Configuración guardada✅')
             except:
                 bot.sendMessage(update.message.chat.id,'Error falta el repo😐.')
             return

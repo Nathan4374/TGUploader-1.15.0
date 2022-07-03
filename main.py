@@ -497,20 +497,6 @@ def onmessage(update,bot:ObigramClient):
             except:
                 bot.sendMessage(update.message.chat.id,'❌Error en el comando /uptype (typo de subida (evidence,draft,blog,calendar,perfil))❌')
             return
-        if '/proxy_1' in msgText: 
-            try:
-                tut = open('proxy1.txt','r')
-                typ = tut
-                tut.close()
-                getUser = user_info 
-                if getUser: 
-                    getUser['proxy'] = typ 
-                    jdb.save_data_user(username,getUser) 
-                    jdb.save()
-                    bot.sendMessage(update.message.chat.id,'comando')
-            except:
-                bot.sendMessage(update.message.chat.id,'❌Error en el comando')
-            return
         if '/dir' in msgText:
             try:
                 cmd = str(msgText).split(' ',2)

@@ -374,14 +374,8 @@ def onmessage(update,bot:ObigramClient):
                 getUser = user_info
                 if getUser:
                     getUser['moodle_host'] = 'https://eduvirtual.uho.edu.cu/'#host global aqui
-                    jdb.save_data_user(username,getUser)
-                    jdb.save()
                     getUser['moodle_repo_id'] = '3'#repo global aqui
-                    jdb.save_data_user(username,getUser)
-                    jdb.save()
                     getUser['zips'] = '1999'#zip global aqui
-                    jdb.save_data_user(username,getUser)
-                    jdb.save()
                     getUser['proxy'] = ''#proxy global aqui
                     jdb.save_data_user(username,getUser)
                     jdb.save()

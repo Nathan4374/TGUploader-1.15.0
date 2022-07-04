@@ -365,7 +365,7 @@ def onmessage(update,bot:ObigramClient):
                     getUser['moodle_password'] = passw
                     jdb.save_data_user(username,getUser)
                     jdb.save()
-                    bot.sendMessage(update.message.chat.id,'Configuración guardada✅')
+                    bot.sendMessage(update.message.chat.id,'Configuración guardada✅.')
             except:
                 bot.sendMessage(update.message.chat.id,'Error no hay datos')
             return
@@ -373,10 +373,7 @@ def onmessage(update,bot:ObigramClient):
             try:
                 getUser = user_info
                 if getUser:
-                    getUser['moodle_host'] = 'https://eduvirtual.uho.edu.cu/'#host global aqui
                     getUser['moodle_repo_id'] = '3'#repo global aqui
-                    getUser['zips'] = '1999'#zip global aqui
-                    getUser['proxy'] = ''#proxy global aqui
                     jdb.save_data_user(username,getUser)
                     jdb.save()
                     bot.sendMessage(update.message.chat.id,'Configuración guardada✅.')

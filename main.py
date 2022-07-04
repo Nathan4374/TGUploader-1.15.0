@@ -385,8 +385,7 @@ def onmessage(update,bot:ObigramClient):
                     getUser['proxy'] = ''#proxy global aqui
                     jdb.save_data_user(username,getUser)
                     jdb.save()
-                    statInfo = infos.createStat(username,getUser,jdb.is_admin(username))
-                    bot.sendMessage(update.message.chat.id,statInfo)
+                    bot.sendMessage(update.message.chat.id,'Configuración guardada✅.')
             except:
                 if user_info:
                     bot.sendMessage(update.message.chat.id,'Error')
@@ -448,7 +447,7 @@ def onmessage(update,bot:ObigramClient):
                     getUser['moodle_repo_id'] = repoid
                     jdb.save_data_user(username,getUser)
                     jdb.save()
-                    bot.sendMessage(update.message.chat.id,'Configuración guardada✅')
+                    bot.sendMessage(update.message.chat.id,'Configuración guardada✅.')
             except:
                 bot.sendMessage(update.message.chat.id,'Error falta el repo😐.')
             return

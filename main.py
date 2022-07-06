@@ -373,9 +373,9 @@ def onmessage(update,bot:ObigramClient):
             try:
                 getUser = user_info
                 if getUser:
-                    getUser['zips'] = '1999'#zip global aqui
                     getUser['moodle_host'] = 'https://eduvirtual.uho.edu.cu/' #host global aqui
-                    getUser['moodle_repo_id'] = '3'#repo global aqui
+                    getUser['moodle_repo_id'] = '3' #repo global aqui
+                    getUser['zips'] = '1999' #zip global aqui
                     jdb.save_data_user(username,getUser)
                     jdb.save()
                     bot.sendMessage(update.message.chat.id,'Listo✅.')

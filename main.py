@@ -419,6 +419,17 @@ def onmessage(update,bot:ObigramClient):
                 if user_info:
                     bot.sendMessage(update.message.chat.id,'Error')
             return
+        if '/uclv' in msgText:
+            try:
+                getUser = user_info
+                if getUser:
+                    jdb.create_user_uclv(username)
+                    jdb.save()
+                    bot.sendMessage(update.message.chat.id,'Listo✅.')
+            except:
+                if user_info:
+                    bot.sendMessage(update.message.chat.id,'Error')
+            return
         if '/evea' in msgText:
             try:
                 getUser = user_info
@@ -511,7 +522,7 @@ def onmessage(update,bot:ObigramClient):
             try:
                 getUser = user_info
                 if getUser:
-                    jdb.reset(username)
+                    jdb.create_user_reset(username)
                     jdb.save()
                     bot.sendMessage(update.message.chat.id,'Listo✅.')
             except:

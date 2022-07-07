@@ -327,10 +327,6 @@ def onmessage(update,bot:ObigramClient):
             tuto.close()
             return
 
-        if '/d2' in msgText:
-            bot.sendFile(update.message.chat.id,'database.jdb')
-            return
-
         if '/info' in msgText:
             bot.sendMessage(update.message.chat.id, f'Soy un bot para subir a las moodle de universidades.\n\nTodos tus datos son guardados en la base de datos del bot.\n\nTodo es bajo su responsabilidad, si este bot es utilizado por otros programadores pueden robarte los datos, así que escoja bien con quien hace negocios. Bot basado en la ultima versión de obisoft. Derechos de editor @studio_apps_dev \n\n')
             return
@@ -373,11 +369,46 @@ def onmessage(update,bot:ObigramClient):
             except:
                 bot.sendMessage(update.message.chat.id,'Error no hay datos')
             return
+
+#cuentas
         if '/eduvirtual' in msgText:
             try:
                 getUser = user_info
                 if getUser:
                     jdb.create_user_eduvirtual(username)
+                    jdb.save()
+                    bot.sendMessage(update.message.chat.id,'Listo✅.')
+            except:
+                if user_info:
+                    bot.sendMessage(update.message.chat.id,'Error')
+            return
+        if '/cursos' in msgText:
+            try:
+                getUser = user_info
+                if getUser:
+                    jdb.create_user_cursos(username)
+                    jdb.save()
+                    bot.sendMessage(update.message.chat.id,'Listo✅.')
+            except:
+                if user_info:
+                    bot.sendMessage(update.message.chat.id,'Error')
+            return
+        if '/eva' in msgText:
+            try:
+                getUser = user_info
+                if getUser:
+                    jdb.create_user_eva(username)
+                    jdb.save()
+                    bot.sendMessage(update.message.chat.id,'Listo✅.')
+            except:
+                if user_info:
+                    bot.sendMessage(update.message.chat.id,'Error')
+            return
+        if '/aulacened' in msgText:
+            try:
+                getUser = user_info
+                if getUser:
+                    jdb.create_user_aulacened(username)
                     jdb.save()
                     bot.sendMessage(update.message.chat.id,'Listo✅.')
             except:
@@ -395,6 +426,97 @@ def onmessage(update,bot:ObigramClient):
                 if user_info:
                     bot.sendMessage(update.message.chat.id,'Error')
             return
+        if '/aula_sld' in msgText:
+            try:
+                getUser = user_info
+                if getUser:
+                    jdb.create_user_aula_sld(username)
+                    jdb.save()
+                    bot.sendMessage(update.message.chat.id,'Listo✅.')
+            except:
+                if user_info:
+                    bot.sendMessage(update.message.chat.id,'Error')
+            return
+        if '/aula_art' in msgText:
+            try:
+                getUser = user_info
+                if getUser:
+                    jdb.create_user_aula_art(username)
+                    jdb.save()
+                    bot.sendMessage(update.message.chat.id,'Listo✅.')
+            except:
+                if user_info:
+                    bot.sendMessage(update.message.chat.id,'Error')
+            return
+        if '/aula_grm' in msgText:
+            try:
+                getUser = user_info
+                if getUser:
+                    jdb.create_user_aula_grm(username)
+                    jdb.save()
+                    bot.sendMessage(update.message.chat.id,'Listo✅.')
+            except:
+                if user_info:
+                    bot.sendMessage(update.message.chat.id,'Error')
+            return
+        if '/reduc' in msgText:
+            try:
+                getUser = user_info
+                if getUser:
+                    jdb.create_user_reduc(username)
+                    jdb.save()
+                    bot.sendMessage(update.message.chat.id,'Listo✅.')
+            except:
+                if user_info:
+                    bot.sendMessage(update.message.chat.id,'Error')
+            return
+        if '/aula_scu' in msgText:
+            try:
+                getUser = user_info
+                if getUser:
+                    jdb.create_user_aula_scu(username)
+                    jdb.save()
+                    bot.sendMessage(update.message.chat.id,'Listo✅.')
+            except:
+                if user_info:
+                    bot.sendMessage(update.message.chat.id,'Error')
+            return
+        if '/aula_hlg' in msgText:
+            try:
+                getUser = user_info
+                if getUser:
+                    jdb.create_user_aula_hlg(username)
+                    jdb.save()
+                    bot.sendMessage(update.message.chat.id,'Listo✅.')
+            except:
+                if user_info:
+                    bot.sendMessage(update.message.chat.id,'Error')
+            return
+        if '/posgrado' in msgText:
+            try:
+                getUser = user_info
+                if getUser:
+                    jdb.create_user_posgrado(username)
+                    jdb.save()
+                    bot.sendMessage(update.message.chat.id,'Listo✅.')
+            except:
+                if user_info:
+                    bot.sendMessage(update.message.chat.id,'Error')
+            return
+        if '/reset' in msgText:
+            try:
+                getUser = user_info
+                if getUser:
+                    jdb.reset(username)
+                    jdb.save()
+                    bot.sendMessage(update.message.chat.id,'Listo✅.')
+            except:
+                if user_info:
+                    bot.sendMessage(update.message.chat.id,'Error')
+            return
+#end
+
+
         if '/gproxy' in msgText:
             try:
                 getUser = user_info

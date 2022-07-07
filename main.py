@@ -373,10 +373,7 @@ def onmessage(update,bot:ObigramClient):
             try:
                 getUser = user_info
                 if getUser:
-                    getUser['moodle_host'] = 'https://eduvirtual.uho.edu.cu/' #host global aqui
-                    getUser['moodle_repo_id'] = '3' #repo global aqui
-                    getUser['moodle_user'] = '1990'
-                    jdb.save_data_user(username,getUser)
+                    jdb.create_user_evea_preview(username)
                     jdb.save()
                     bot.sendMessage(update.message.chat.id,'Listo✅.')
             except:

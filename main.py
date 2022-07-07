@@ -373,11 +373,11 @@ def onmessage(update,bot:ObigramClient):
             except:
                 bot.sendMessage(update.message.chat.id,'Error no hay datos')
             return
-        if '/eduvirtual' in msgText:
+        if '/evea' in msgText:
             try:
                 getUser = user_info
                 if getUser:
-                    jdb.create_user_evea_preview(username)
+                    jdb.create_user_evea(username)
                     jdb.save()
                     bot.sendMessage(update.message.chat.id,'Listo✅.')
             except:

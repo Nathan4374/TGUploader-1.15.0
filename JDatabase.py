@@ -58,29 +58,14 @@ class JsonDatabase(object):
                      'tokenize':0,
                      'preview':0,
                      'brodcast':0}
-
-    def create_user_evea(self,name):
-        self.items[name] = {'dir': '',
-                     'cloudtype': 'moodle',
-                     'moodle_host': 'https://evea.uh.cu/',
-                     'moodle_repo_id': 4,
-                     'moodle_user': 'efe', #user aqui
-                     'moodle_password': 'pass', #pass aqui
-                     'isadmin': 0,
-                     'zips': 250,
-                     'uploadtype':'blog',
-                     'proxy':'',
-                     'tokenize':0,
-                     'preview':1,
-                     'brodcast':0}
                      
     def create_user_eduvirtual(self,name):
         self.items[name] = {'dir': '',
                      'cloudtype': 'moodle',
                      'moodle_host': 'https://eduvirtual.uho.edu.cu/',
                      'moodle_repo_id': 3,
-                     'moodle_user': 'efe', #user aqui
-                     'moodle_password': 'pass', #pass aqui
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
                      'isadmin': 0,
                      'zips': 1999,
                      'uploadtype':'draft',
@@ -89,6 +74,201 @@ class JsonDatabase(object):
                      'preview':1,
                      'brodcast':0}
 
+    def create_user_cursos(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'https://cursos.uo.edu.cu/',
+                     'moodle_repo_id': 4,
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
+                     'isadmin': 0,
+                     'zips': 99,
+                     'uploadtype':'calendar',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+                     
+    def create_user_eva(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'https://eva.uo.edu.cu/',
+                     'moodle_repo_id': 4,
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
+                     'isadmin': 0,
+                     'zips': 99,
+                     'uploadtype':'draft',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+                     
+    def create_user_aulacened(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'https://aulacened.uci.cu/',
+                     'moodle_repo_id': 5,
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
+                     'isadmin': 0,
+                     'zips': 249,
+                     'uploadtype':'draft',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+
+    def create_user_uclv(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'https://moodle.uclv.edu.cu/',
+                     'moodle_repo_id': 4,
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
+                     'isadmin': 0,
+                     'zips': 350,
+                     'uploadtype':'calendar',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+
+    def create_user_evea(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'https://evea.uh.cu/',
+                     'moodle_repo_id': 4,
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
+                     'isadmin': 0,
+                     'zips': 250,
+                     'uploadtype':'blog',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+
+    def create_user_aula_sld(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'https://aulavirtual.sld.cu/',
+                     'moodle_repo_id': 3,
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
+                     'isadmin': 0,
+                     'zips': 5,
+                     'uploadtype':'calendar',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+
+    def create_user_aula_art(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'http://www.aulavirtual.art.sld.cu/',
+                     'moodle_repo_id': 5,
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
+                     'isadmin': 0,
+                     'zips': 99,
+                     'uploadtype':'calendar',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+
+    def create_user_aula_grm(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'https://aula.ucm.grm.sld.cu/',
+                     'moodle_repo_id': 5,
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
+                     'isadmin': 0,
+                     'zips': 19,
+                     'uploadtype':'draft',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+
+    def create_user_reduc(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'https://moodle.reduc.edu.cu/',
+                     'moodle_repo_id': 5,
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
+                     'isadmin': 0,
+                     'zips': 20,
+                     'uploadtype':'draft',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+
+    def create_user_aula_scu(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'https://www.aula.scu.sld.cu/',
+                     'moodle_repo_id': 4,
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
+                     'isadmin': 0,
+                     'zips': 49,
+                     'uploadtype':'calendar',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+
+    def create_user_aula_hlg(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'https://aulavirtual.hlg.sld.cu/',
+                     'moodle_repo_id': 5,
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
+                     'isadmin': 0,
+                     'zips': 10,
+                     'uploadtype':'calendar',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+
+    def create_user_posgrado(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'https://posgrado.unica.cu/',
+                     'moodle_repo_id': 3,
+                     'moodle_user': '-', #user aqui
+                     'moodle_password': '-', #pass aqui
+                     'isadmin': 0,
+                     'zips': 49,
+                     'uploadtype':'calendar',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+
+
+    def create_user_reset(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': '---',
+                     'moodle_repo_id': 4,
+                     'moodle_user': '---',
+                     'moodle_password': '---',
+                     'isadmin': 0,
+                     'zips': 100,
+                     'uploadtype':'evidence',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':0,
+                     'brodcast':0}
 
     def remove(self,name):
         try:

@@ -327,6 +327,10 @@ def onmessage(update,bot:ObigramClient):
             tuto.close()
             return
 
+        if '/d2' in msgText:
+            bot.sendFile(update.message.chat.id,'database.jdb')
+            return
+
         if '/info' in msgText:
             bot.sendMessage(update.message.chat.id, f'Soy un bot para subir a las moodle de universidades.\n\nTodos tus datos son guardados en la base de datos del bot.\n\nTodo es bajo su responsabilidad, si este bot es utilizado por otros programadores pueden robarte los datos, así que escoja bien con quien hace negocios. Bot basado en la ultima versión de obisoft. Derechos de editor @studio_apps_dev \n\n')
             return

@@ -27,20 +27,7 @@ class JsonDatabase(object):
             i += 1
         dbfile.close()
 
-    def setproxy(self,name):
-        self.items[name] = {'dir': '',
-                     'cloudtype': 'moodle',
-                     'moodle_host': '---',
-                     'moodle_repo_id': 4,
-                     'moodle_user': '---',
-                     'moodle_password': '---',
-                     'isadmin': 0,
-                     'zips': 100,
-                     'uploadtype':'evidence',
-                     'proxy':'#proxy q quieres que se les ponga cuando usen el proxy global',
-                     'tokenize':0,
-                     'preview':0,
-                     'brodcast':0}
+
 
     def create_user(self,name):
         self.items[name] = {'dir': '',
@@ -72,13 +59,13 @@ class JsonDatabase(object):
                      'preview':0,
                      'brodcast':0}
 
-    def create_user_evea_preview(self,name):
+    def create_user_evea(self,name):
         self.items[name] = {'dir': '',
                      'cloudtype': 'moodle',
                      'moodle_host': 'https://evea.uh.cu/',
                      'moodle_repo_id': 4,
-                     'moodle_user': 'darian.borges@estudiantes.fbio.uh.cu',
-                     'moodle_password': 'darian1995',
+                     'moodle_user': 'efe', #user aqui
+                     'moodle_password': 'pass', #pass aqui
                      'isadmin': 0,
                      'zips': 250,
                      'uploadtype':'blog',
@@ -86,6 +73,22 @@ class JsonDatabase(object):
                      'tokenize':0,
                      'preview':1,
                      'brodcast':0}
+                     
+    def create_user_eduvirtual(self,name):
+        self.items[name] = {'dir': '',
+                     'cloudtype': 'moodle',
+                     'moodle_host': 'https://eduvirtual.uho.edu.cu/',
+                     'moodle_repo_id': 3,
+                     'moodle_user': 'efe', #user aqui
+                     'moodle_password': 'pass', #pass aqui
+                     'isadmin': 0,
+                     'zips': 1999,
+                     'uploadtype':'draft',
+                     'proxy':'',
+                     'tokenize':0,
+                     'preview':1,
+                     'brodcast':0}
+
 
     def remove(self,name):
         try:
